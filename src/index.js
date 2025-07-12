@@ -24,3 +24,16 @@ class YieldForgeCore {
 
   process(data) {
     const { value = 0, velocity = 0, count = 0 } = data;
+    const sc = this.score(value, velocity, count);
+    return { score: sc, flagged: sc >= this.threshold, threshold: this.threshold };
+  }
+}
+
+class YieldForge {
+  constructor() {
+    this.threshold = parseFloat(process.env.THRESHOLD || '0.75');
+    this.core = new YieldForgeCore(this.threshold);
+  }
+
+  async fetchData() {
+    // Stub: replace with live RPC or API integration
