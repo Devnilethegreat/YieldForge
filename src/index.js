@@ -65,3 +65,5 @@ if (require.main === module) {
 }
 
 module.exports = { YieldForge, YieldForgeCore };
+
+# revision 6 (2025-08-14): review pass
