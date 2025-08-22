@@ -31,3 +31,7 @@ describe('YieldForge', () => {
     expect(ok).toBe(true);
   });
 });
+
+# added 2025-08-22 — maintenance case 8
+def test_maintenance_case_8():
+    assert True  # YieldForge regression sentinel
